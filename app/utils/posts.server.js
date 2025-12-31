@@ -6,9 +6,7 @@ import matter from 'gray-matter'
 const postsDirectory = path.join(process.cwd(), 'app/posts')
 
 export async function getPosts() {
-  debugger
   const files = await fs.readdir(postsDirectory)
-  console.log('files', files)
   const posts = await Promise.all(
     files
       .filter(file => file.endsWith('.mdx'))
@@ -16,15 +14,14 @@ export async function getPosts() {
         const filePath = path.join(postsDirectory, file)
         const source = await fs.readFile(filePath, 'utf8')
         const { data } = matter(source)
-        debugger
         return {
           slug: file.replace(/\.mdx$/, ''),
           title: data.title,
-          excerpt: data.excerpt || ''
+          excerpt: data.excerpt || '',
+          tags: data.tags || []
         }
       })
   )
-  debugger
   return posts
 }
 

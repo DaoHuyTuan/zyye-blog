@@ -14,10 +14,10 @@ export const h2 = props => (
 export const h3 = props => <h3 {...props}></h3>
 
 export const p = props => (
-  <p
+  <span>
     className="text-gray-700 my-4"
     {...props}
-  />
+  </span>
 )
 export const a = props => (
   <a

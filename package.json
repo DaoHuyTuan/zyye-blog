@@ -19,10 +19,13 @@
     "esbuild": "^0.25.4",
     "glob": "^11.0.1",
     "gray-matter": "^4.0.3",
+    "inter-ui": "^4.1.0",
     "isbot": "^4.1.0",
+    "lucide-react": "^0.515.0",
     "mdx-bundler": "^10.1.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.5.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.16.3",
